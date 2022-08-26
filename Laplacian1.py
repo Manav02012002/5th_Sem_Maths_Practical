@@ -1,5 +1,5 @@
 # MT5P2 Experiment 1 
-# Program to calculate the Curl
+# Program to calculate the Laplacian
 # Manav Madan Rawal 20PCM53
 
 from sympy import*
