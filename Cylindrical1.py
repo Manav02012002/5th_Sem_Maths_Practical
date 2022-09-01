@@ -1,0 +1,15 @@
+from sympy import*
+x,y,z,r,theta,e_r,e_theta,e_z = symbols("x,y,z,r,theta,e_r,e_theta,e_z")
+m = r*cos(theta)
+n = r*sin(theta)
+f = x+y+z
+w = f.subs([(x,m),(y,n),(z,z)])
+print("The Cylndrical coordinate is ",w )
+a = diff(w,r)
+b = (1/r)*diff(w,theta)
+c = diff(w,z)
+print("The Gradient is (",a,")e_r + (",b,")e_theta + (",c,")e_z")
+p = (1/r)*diff(r*a,r)
+q = (1/(r**2))*diff(w,theta,2)
+s = diff(w,z,2)
+print("The Laplacian is", p+q+s)
