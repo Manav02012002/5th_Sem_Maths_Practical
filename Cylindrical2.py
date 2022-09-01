@@ -4,6 +4,7 @@ m = r*cos(theta)
 n = r*sin(theta)
 p = (cos(theta)*e_r)-(sin(theta)*e_theta)
 q = (sin(theta)*e_r)-(cos(theta)*e_theta)
+s = e_z
 f = (x*i +y*j +z*k)
 w = simplify(f.subs([(x,m),(y,n),(z,z),(i,p),(j,q),(k,s)]))
 print("The Cylidrical coordinate is ",w )
